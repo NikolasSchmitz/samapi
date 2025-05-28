@@ -12,10 +12,10 @@ url = "https://download.pytorch.org/whl/nightly/cu128"
 priority = "explicit"
 
 [tool.poetry.dependencies]
-python = "~3.11" # Confirmed for Python 3.11
+python = "~3.11"
 fastapi = {extras = ["all"], version = "^0.96.0"}
 geojson = "*"
-numpy = ">=2.2,<3.0" # PyTorch 2.x needs NumPy 2.x
+numpy = ">=2.2,<3.0"
 scikit-image = ">=0.24.0"
 shapely = "*"
 opencv-python = "^4.11.0"
