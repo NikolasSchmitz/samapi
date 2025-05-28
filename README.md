@@ -1,5 +1,22 @@
 # Segment Anything Models (SAM) API
 
+> [!NOTE]
+> This version of samapi has been configured to support the NVIDIA RTX 50xx series (e.g., RTX 5070 Ti tested under WSL2 on Windows 11) by utilizing PyTorch nightly builds. This setup resolves numerous dependency conflicts and ensures compatibility with the latest hardware. 
+> 
+> How to Set Up and Run This Updated samapi:
+> 
+> ```bash
+> conda create -n samapi-py311 -y python=3.11
+> conda activate samapi-py311
+> 
+> # Tell Poetry to use the active Conda environment
+> poetry config virtualenvs.create false --local
+> 
+> poetry lock
+> poetry install
+> uvicorn samapi.main:app --workers 2
+> ```
+
 <img src="https://github.com/ksugar/samapi/releases/download/assets/qupath-samapi.gif" width="768">
 
 <img src="https://github.com/ksugar/samapi/releases/download/assets/qupath-sam-multipoint-live.gif" width="768">
